@@ -22,7 +22,7 @@ class ExercisesList extends Component{
     }
 
     componentDidMount(){
-        axios.get('http://localhost:5000/exercises')
+        axios.get('https://exertracker-api-p0nk.onrender.com/exercises')
         .then(response=>{
             this.setState({exercises:response.data})
         })
@@ -32,7 +32,7 @@ class ExercisesList extends Component{
     }
 
     deleteExercise(id) {
-        axios.delete('http://localhost:5000/exercises/'+id)
+        axios.delete('https://exertracker-api-p0nk.onrender.com/exercises/'+id)
           .then(response => { console.log(response.data)});
     
         this.setState({
